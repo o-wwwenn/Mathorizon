@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MathorizonApp: App {
@@ -13,5 +14,6 @@ struct MathorizonApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [QuestionCategory.self, Question.self, TestSession.self])
     }
 }
